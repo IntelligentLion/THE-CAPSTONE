@@ -4,7 +4,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text style={styles.paragraph}>
-        
+      Submit a issue
       </Text>
     </View>
   );
