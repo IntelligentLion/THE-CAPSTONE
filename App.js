@@ -2,29 +2,36 @@ import * as React from 'react';
 import { Text, View, StyleSheet, Button, TextInput } from 'react-native';
 
 export default function App() {
-  const [submit, setSubmit] = React.useState(0);
+  const [submit, setSubmit] = React.useState();
   const onSubmit = () => {
-  }
-  const[submitButton, setSubmitButton] = React.useState(0);
-  const[content, setContent] = React.useState(0);
-  const onContent = (newContent) => {
-    setContent(newContent);
   }
   return (
     <View style={styles.container}>
       <Text style={styles.paragraph}>
-      Submit a issue
+      Submit an Issue
       </Text>
      <TextInput
-   onChangeText={submitButton}
-   value={content}
    keyboardType="number-pad"
+   style = {styles.row}
 />
       <Button
   onPress={onSubmit}
-  title="Learn More"
+  title="Report"
   color="#841584"
-  accessibilityLabel="Learn more about this purple button"
+  accessibilityLabel="Click this button to report."
+/>
+
+<Text style = {styles.paragraph}> Celebrate someone! </Text>
+<TextInput
+keyboardType = "number-pad"
+style = {styles.row}
+/>
+
+<Button 
+onPress = {onSubmit}
+title = "Celebrate!"
+color = "#FF5F1F"
+accessibilityLabel = "Click this button to celebrate someone's good deed!"
 />
     </View>
   );
@@ -42,5 +49,9 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     textAlign: 'center',
+  },
+  row: {
+    borderWidth: 1,
+    margin: 15,
   },
 });
