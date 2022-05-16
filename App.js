@@ -2,8 +2,11 @@ import * as React from 'react';
 import { Text, View, StyleSheet, Button, TextInput } from 'react-native';
 
 export default function App() {
-  const [submit, setSubmit] = React.useState();
-  const onSubmit = () => {
+  const [report, setReport] = React.useState();
+  const onReport = () => {
+  }
+  const [celebrate, setCelebrate] = React.useState();
+  const onCelebrate = () => {
   }
   return (
     <View style={styles.container}>
@@ -15,7 +18,7 @@ export default function App() {
    style = {styles.row}
 />
       <Button
-  onPress={onSubmit}
+  onPress={onReport}
   title="Report"
   color="#841584"
   accessibilityLabel="Click this button to report."
@@ -28,7 +31,7 @@ style = {styles.row}
 />
 
 <Button 
-onPress = {onSubmit}
+onPress = {onCelebrate}
 title = "Celebrate!"
 color = "#FF5F1F"
 accessibilityLabel = "Click this button to celebrate someone's good deed!"
