@@ -2,23 +2,29 @@ import * as React from 'react';
 import { Text, View, StyleSheet, Button, TextInput } from 'react-native';
 
 export default function App() {
-  const [report, setReport] = React.useState();
+  const [disp, setDisp] = React.useState('Hello there!');
   const onReport = () => {
-    setReport ('Good job, your report have been submited')
-  }
+    setDisp('Your report has been submitted!');
+    setPoints(points + 1);
+  };
+  const [disp2, setDisp2] = React.useState('');
   const [celebrate, setCelebrate] = React.useState();
   const onCelebrate = () => {
-     setCelebrate ('Good job, you successful celebrated someones kindness')
-  }
+    setDisp2('Your celebration of kindess has been submitted! Great Job!');
+    setPoints(points + 1);
+  };
+  const [points, setPoints] = React.useState(0);
   return (
     <View style={styles.container}>
-     <Text style={styles.paragraph}> {report} </Text>
+    <Text style = {styles.paragraph}>Points: {points}</Text>
+    <Text style = {styles.paragraph}> {disp} </Text>
       <Text style={styles.paragraph}>
       Submit an Issue
       </Text>
      <TextInput
    keyboardType="number-pad"
    style = {styles.row}
+   clearButtonMode = "always"
 />
       <Button
   onPress={onReport}
@@ -26,15 +32,12 @@ export default function App() {
   color="#841584"
   accessibilityLabel="Click this button to report."
 />
-  <Text style={styles.paragraph}>
-    {celebrate}
-  </Text>
-      <Text style = {styles.paragraph}> 
-      Celebrate someone! 
-      </Text>
-      <TextInput
-    keyboardType = "number-pad"
-      style = {styles.row}
+
+<Text style = {styles.paragraph}>{disp2}</Text>
+<Text style = {styles.paragraph}> Celebrate someone's kindness! </Text>
+<TextInput
+keyboardType = "number-pad"
+style = {styles.row}
 />
 
 <Button 
