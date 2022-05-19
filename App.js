@@ -24,14 +24,14 @@ export default function App() {
   const [totalpoints, setTotalpoints] = React.useState({points});
   return (
     <View style={styles.container}>
+    <Text style = {styles.paragraph}> {disp} </Text>
     <Text style = {styles.paragraph}>Submitted Points: {submitPoints}</Text>
     <Text style = {styles.paragraph}>Current Points: {points}</Text>
     <Button
     onPress = {onPoints}
     title = "Submit Points Here!"
     />
-    <Text style = {styles.paragraph}> {disp} </Text>
-      <Text style={styles.paragraph}>
+    <Text style={styles.paragraph}>
       Submit an Issue
       </Text>
      <TextInput
