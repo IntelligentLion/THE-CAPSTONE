@@ -15,12 +15,16 @@ export default function App() {
   };
   const [points, setPoints] = React.useState(0);
   const onPoints = () => {
+    setSubmitPoints(submitPoints + points);
     setPoints(0);
+  };
+  const [submitPoints, setSubmitPoints] = React.useState(0);
+  const onSubmitPoints = () => {
   };
   const [totalpoints, setTotalpoints] = React.useState({points});
   return (
     <View style={styles.container}>
-    <Text style = {styles.paragraph}>Submitted Points: {points}</Text>
+    <Text style = {styles.paragraph}>Submitted Points: {submitPoints}</Text>
     <Text style = {styles.paragraph}>Current Points: {points}</Text>
     <Button
     onPress = {onPoints}
