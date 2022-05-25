@@ -21,12 +21,15 @@ export default function App() {
   const [submitPoints, setSubmitPoints] = React.useState(0);
   const onSubmitPoints = () => {
   };
+  const [reports, setReports] = React.useState('I saw a kid wearing a red shirt and blue pants on Tuesday hit another student. The person who got hit did not complain, yet it was still very hurtful of the kid in the red shirt and blue pants.');
+  const [reports1, setReports1] = React.useState('I saw someone say rude things to someone else today. He was wearing a black shirt and a black pant and was really tall -- around 6.5 feet. He gave physical and emotional damage to the person that he was bullying.');
   const [totalpoints, setTotalpoints] = React.useState({points});
+
   return (
     <View style={styles.container}>
     <Text style = {styles.paragraph}> {disp} </Text>
     <Text style = {styles.paragraph}>Submitted Points: {submitPoints}</Text>
-    <Text style = {styles.paragraph}>Current Points: {points}</Text>
+    <Text style = {styles.paragraph}>Current Points: {points} </Text>
     <Button
     onPress = {onPoints}
     title = "Submit Points Here!"
@@ -59,6 +62,11 @@ title = "Celebrate!"
 color = "#FF5F1F"
 accessibilityLabel = "Click this button to celebrate someone's good deed!"
 />
+
+<Text style = {styles.paragraph}>Other Reports</Text>
+<Text style = {styles.anonymous}><Text></Text>Anonymous:</Text> <Text>{reports}</Text>
+<Text style = {styles.anonymous}><Text></Text>Anonymous:</Text> <Text>{reports1}</Text>
+
     </View>
   );
 }
@@ -80,4 +88,9 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     margin: 15,
   },
+  anonymous: {
+    margin: 24,
+    fontSize: 18,
+    fontWeight: 'bold',
+    }
 });
