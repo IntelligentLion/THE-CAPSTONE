@@ -23,6 +23,7 @@ export default function App() {
   };
   const [reports, setReports] = React.useState('I saw a kid wearing a red shirt and blue pants on Tuesday hit another student. The person who got hit did not complain, yet it was still very hurtful of the kid in the red shirt and blue pants.');
   const [reports1, setReports1] = React.useState('I saw someone say rude things to someone else today. He was wearing a black shirt and a black pant and was really tall -- around 6.5 feet. He gave physical and emotional damage to the person that he was bullying.');
+  const [reports2, setReports2] = React.useState('I saw someone vandalize the walls yesterday. He was an 8th grader, and was wearing a black sw');
   const [totalpoints, setTotalpoints] = React.useState({points});
 
   return (
@@ -34,9 +35,24 @@ export default function App() {
     onPress = {onPoints}
     title = "Submit Points Here!"
     />
+    <Text style = {styles.paragraph}>
+      Rules: 
+      </Text>
+      <Text>
+      1. You must not mention someone's name. Only descriptive features are allowed. If needed tell your teacher the name of the person you are going to report and then your teacher will give you further instructions. If names are mentioned, the teachers will eventually know. So DO NOT mention names.  
+      </Text>
+      <Text style = {styles.paragraph}>___</Text>
+      <Text>
+      2. Show WINGS behavior. We expect you to be willing, integrous, noble, generous, and self-directed while using this site. Making fake reports on others to get points will not be allowed. We will check all reports before allowing WINGS cards to be distributed. 
+      </Text>
+      <Text style = {styles.paragraph}>___</Text>
+      <Text>
+      3. Don't mess around! Do not make unnecessary reports! (Adds onto rule 2).
+      </Text>
     <Text style={styles.paragraph}>
       Submit an Issue
       </Text>
+    
      <TextInput
    keyboardType="number-pad"
    style = {styles.row}
